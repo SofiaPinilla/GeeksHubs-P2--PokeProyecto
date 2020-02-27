@@ -100,16 +100,15 @@
         line-height: 100%;
         margin: 15px 0 8px;
         padding: 0;
+        position: relative;
+        text-align: center;
         height: 5vh;
         width: 5vh;
     }
     
-    #contacto {
-        display: flex;
-        justify-content: space-between;
+    .contaimagen {
+        width: 50%;
     }
-    
-    .contaimagen {}
     /* codepen */
     
     html {
@@ -118,7 +117,10 @@
         height: 100%;
     }
     
-    #form-main {}
+    #form-main {
+        display: flex;
+        justify-content: center;
+    }
     
     #form-div {
         padding: 30px;
@@ -205,6 +207,7 @@
     
     #button-blue {
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        float: left;
         width: 100%;
         border: #fbfbfb solid 4px;
         cursor: pointer;
@@ -243,4 +246,41 @@
     .submit:hover .ease {
         width: 100%;
         background-color: white;
+    }
+    /* estilos draganddrop */
+    
+    .fill {
+        background-image: url('imagenes/pokedraag.png');
+        position: relative;
+        height: 150px;
+        width: 150px;
+        top: 5px;
+        left: 5px;
+        cursor: pointer;
+    }
+    
+    .empty {
+        display: inline-block;
+        height: 160px;
+        width: 160px;
+        margin: 10px;
+    }
+    
+    .hold {
+        border: solid #ccc 4px;
+    }
+    
+    .hovered {
+        background: #f4f4f4;
+    }
+    
+    .poke {
+        display: inline-block;
+        height: 160px;
+        width: 160px;
+        margin: 10px;
+    }
+    
+    .fill .invisible {
+        display: none;
     }
