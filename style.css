@@ -8,6 +8,7 @@
         font-family: 'Dosis', sans-serif;
         font-size: 16px;
         background-color: #f9f9f9;
+        cursor: url(imagenes/cursorpoke1.png), url(cursor.cur), pointer;
     }
     
     .titulo {
@@ -26,6 +27,38 @@
         display: flex;
         margin-bottom: 2rem;
         background: #f1f1f1;
+    }
+    
+    .pokedex {
+        display: flex;
+        margin-bottom: 2rem;
+        background: #f1f1f1;
+    }
+    
+    .pokedex h3 {
+        margin-bottom: 2rem;
+    }
+    
+    .pokedex img {
+        width: 100%;
+    }
+    
+    .charizard {
+        display: flex;
+        margin-bottom: 2rem;
+        background: #f1f1f1;
+    }
+    
+    .charizard h3 {
+        margin-bottom: 2rem;
+    }
+    
+    .charizard img {
+        width: 100%;
+    }
+    
+    .charizard>div {
+        padding: 2rem;
     }
     
     img {
@@ -50,6 +83,9 @@
     
     @media(max-width: 700px) {
         .inicio {
+            display: block;
+        }
+        .charizard {
             display: block;
         }
     }
@@ -81,7 +117,7 @@
     .javi {
         all: unset;
         justify-content: space-between;
-        cursor: pointer;
+        cursor: url(imagenes/cursorpoke1.png), url(cursor.cur), pointer;
         font-size: 15px;
     }
     
@@ -163,14 +199,14 @@
     /* Icons ---------------------------------- */
     
     #name {
-        background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+        background-image: url(imagenes/pokeentrena.png);
         background-size: 30px 30px;
         background-position: 11px 8px;
         background-repeat: no-repeat;
     }
     
     #name:focus {
-        background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+        background-image: url(imagenes/pokeentrena.png);
         background-size: 30px 30px;
         background-position: 8px 5px;
         background-position: 11px 8px;
@@ -178,21 +214,21 @@
     }
     
     #email {
-        background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+        background-image: url(imagenes/pokecorreo.png);
         background-size: 30px 30px;
         background-position: 11px 8px;
         background-repeat: no-repeat;
     }
     
     #email:focus {
-        background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+        background-image: url(imagenes/pokecorreo.png);
         background-size: 30px 30px;
         background-position: 11px 8px;
         background-repeat: no-repeat;
     }
     
     #comment {
-        background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+        background-image: url(imagenes/pokepen.png);
         background-size: 30px 30px;
         background-position: 11px 8px;
         background-repeat: no-repeat;
@@ -256,22 +292,24 @@
         width: 150px;
         top: 5px;
         left: 5px;
-        cursor: pointer;
+        cursor: url(imagenes/pokeentrena.png), url(cursor.cur), pointer;
     }
     
     .empty {
         display: inline-block;
-        height: 160px;
-        width: 160px;
+        height: 400px;
+        width: 400px;
         margin: 10px;
     }
     
     .hold {
         border: solid #ccc 4px;
+        cursor: url(imagenes/pokeentrena.png), url(cursor.cur), pointer;
     }
     
     .hovered {
         background: #f4f4f4;
+        cursor: url(imagenes/pokeentrena.png), url(cursor.cur), pointer;
     }
     
     .poke {
@@ -281,6 +319,9 @@
         margin: 10px;
     }
     
-    .fill .invisible {
-        display: none;
+    #pokedex {
+        text-align: center;
     }
+    /* .flexpoke {
+        display: inline-block;
+    } */
