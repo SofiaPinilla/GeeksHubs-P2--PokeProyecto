@@ -8,7 +8,7 @@
         font-family: 'Dosis', sans-serif;
         font-size: 16px;
         background-color: #f9f9f9;
-        cursor: url(imagenes/cursorpoke1.png), url(cursor.cur), pointer;
+        cursor: url(imagenes/cursorpoke1.png), url(/imagenes/pokecursor.png), pointer;
     }
     
     .titulo {
@@ -81,13 +81,8 @@
         order: 2;
     }
     
-    @media(max-width: 700px) {
-        .inicio {
-            display: block;
-        }
-        .charizard {
-            display: block;
-        }
+    #pokedex {
+        text-align: center;
     }
     
     .visible {
@@ -106,18 +101,20 @@
         padding: 20px;
     }
     
-    .menunavegacion li {
-        float: left;
-        padding: 10px;
+    .menunavegacion ul {
         display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .menunavegacion li {
+        padding: 10px;
         display: inline;
-        justify-content: space-between;
     }
     
     .javi {
         all: unset;
-        justify-content: space-between;
-        cursor: url(imagenes/cursorpoke1.png), url(cursor.cur), pointer;
+        cursor: url(imagenes/cursorpoke1.png), pointer;
         font-size: 15px;
     }
     
@@ -145,7 +142,27 @@
     .contaimagen {
         width: 50%;
     }
-    /* codepen */
+    /* responsive */
+    
+    @media(max-width: 700px) {
+        .menunavegacion {
+            font-size: 12px;
+        }
+        .icono {
+            width: 10px;
+            height: 10px;
+        }
+        .inicio {
+            display: block;
+        }
+        .charizard {
+            display: block;
+        }
+        .pokedex {
+            display: block;
+        }
+    }
+    /* estilos formulario */
     
     html {
         background: url(imagenes/pokefondodef.jpg);
@@ -196,17 +213,16 @@
         color: #30aed6;
         border: #30aed6 solid 3px;
     }
-    /* Icons ---------------------------------- */
     
     #name {
-        background-image: url(imagenes/pokeentrena.png);
+        background-image: url(imagenes/pokenetrenadef.png);
         background-size: 30px 30px;
         background-position: 11px 8px;
         background-repeat: no-repeat;
     }
     
     #name:focus {
-        background-image: url(imagenes/pokeentrena.png);
+        background-image: url(imagenes/pokenetrenadef.png);
         background-size: 30px 30px;
         background-position: 8px 5px;
         background-position: 11px 8px;
@@ -246,7 +262,7 @@
         float: left;
         width: 100%;
         border: #fbfbfb solid 4px;
-        cursor: pointer;
+        cursor: url(imagenes/pokecursor.png), pointer;
         background-color: #3498db;
         color: white;
         font-size: 24px;
@@ -283,7 +299,7 @@
         width: 100%;
         background-color: white;
     }
-    /* estilos draganddrop */
+    /* estilos drag and drop */
     
     .fill {
         background-image: url('imagenes/pokedraag.png');
@@ -292,24 +308,24 @@
         width: 150px;
         top: 5px;
         left: 5px;
-        cursor: url(imagenes/pokeentrena.png), url(cursor.cur), pointer;
+        cursor: url(imagenes/pokeentrena.png), pointer;
     }
     
     .empty {
         display: inline-block;
-        height: 400px;
+        height: 100vh;
         width: 400px;
         margin: 10px;
     }
     
     .hold {
         border: solid #ccc 4px;
-        cursor: url(imagenes/pokeentrena.png), url(cursor.cur), pointer;
+        cursor: url(imagenes/pokeentrena.png), pointer;
     }
     
     .hovered {
         background: #f4f4f4;
-        cursor: url(imagenes/pokeentrena.png), url(cursor.cur), pointer;
+        cursor: url(imagenes/pokeentrena.png), pointer;
     }
     
     .poke {
@@ -319,9 +335,6 @@
         margin: 10px;
     }
     
-    #pokedex {
-        text-align: center;
+    .poke:hover {
+        cursor: url(imagenes/pokedexcursor.png), pointer;
     }
-    /* .flexpoke {
-        display: inline-block;
-    } */

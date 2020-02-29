@@ -60,13 +60,6 @@ for (const empty of empties) {
     empty.addEventListener('drop', dragDrop2);
 }
 
-
-
-//quitar drag
-// function quitarDrag() {
-
-// }
-
 // Funciones drag and drop
 function verDatos() {
     quitarDiv()
@@ -104,6 +97,8 @@ function dragDrop() {
 
 function dragDrop2() {
     this.className = 'poke';
+    imagen2.style.width = '30vw'
+    imagen2.style.height = '50vh'
     this.append(imagen2);
 
 }
