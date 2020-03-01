@@ -10,8 +10,18 @@ JavaScript.
 ### Demo del proyecto 
 
 Puedes ver el proyecto en https://sofiapinilla.github.io/GeeksHubs-P2--PokeProyecto/ .
+ 
+ ---
+ 
+# GeeksHubs-P2 - PokeProyecto
+This project consists of a Pokemon website, in which I make a brief introduction of Pokemon, which is pokemon,
+Pokemon video games, and Pokemon anime.
+
+### Project demo
+
+You can see the project at https://sofiapinilla.github.io/GeeksHubs-P2--PokeProyecto/.
 
 #### Preview
- ![Pokefoto](imagenes/pokefoto.png) .
+! [Pokefoto] (images / pokefoto.png)
 ---
 Hecho por [Sofía Pinilla](https://github.com/SofiaPinilla) 😊
