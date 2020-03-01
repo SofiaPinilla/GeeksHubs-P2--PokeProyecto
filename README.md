@@ -23,7 +23,7 @@ You can see the project at https://sofiapinilla.github.io/GeeksHubs-P2--PokeProy
 
 #### Preview
 
-! [Pokefoto] (images / pokefoto.png)
+! [Pokefoto] (imagenes/pokefoto.png)
 
 ---
 Hecho por [Sofía Pinilla](https://github.com/SofiaPinilla) 😊
