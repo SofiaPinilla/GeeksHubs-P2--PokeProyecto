@@ -22,6 +22,8 @@ Pokemon video games, and Pokemon anime.
 You can see the project at https://sofiapinilla.github.io/GeeksHubs-P2--PokeProyecto/.
 
 #### Preview
+
 ! [Pokefoto] (images / pokefoto.png)
+
 ---
 Hecho por [Sofía Pinilla](https://github.com/SofiaPinilla) 😊
