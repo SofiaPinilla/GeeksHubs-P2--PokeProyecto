@@ -11,12 +11,6 @@
         cursor: url(imagenes/cursorpoke1.png), url(/imagenes/pokecursor.png), pointer;
     }
     
-    .titulo {
-        display: flex;
-        justify-content: center;
-        height: 50vh;
-    }
-    
     .container {
         max-width: 1100px;
         margin: auto;
