@@ -10,13 +10,15 @@ inicioJ.addEventListener('click', verInicio);
 contactoJ.addEventListener('click', verContacto);
 pokedexJ.addEventListener('click', verPokedex);
 
+
 //funciones del menunavegación
 
 function quitarDiv() {
     inicio.className = 'invisible';
     contacto.className = 'invisible';
     pokedex.className = 'invisible';
-    charizard.className = 'invisible';
+    squirtle.className = 'invisible';
+    combate.className = 'invisible';
 }
 
 function verInicio() {
@@ -43,27 +45,29 @@ const empties = document.querySelectorAll('.empty');
 const imagen = document.createElement('img');
 const imagen2 = document.createElement('img');
 const poke = document.querySelector('.poke');
-const charizard = document.getElementById('charizard');
-imagen.setAttribute('src', 'imagenes/pokeabierta.png');
-imagen2.setAttribute('src', 'imagenes/charizard.png');
+const squirtle = document.getElementById('squirtle');
+const volver = document.querySelector('.volver');
+const combate = document.getElementById('combate');
+// imagen.setAttribute('src', 'imagenes/pokeabierta.png');
+// imagen2.setAttribute('src', 'imagenes/charizard.png');
 
 // Listeners del drag and drop
 fill.addEventListener('dragstart', dragStart);
 fill.addEventListener('dragend', dragEnd);
-imagen2.addEventListener('click', verDatos);
-
+fill.addEventListener('click', verDatos);
+volver.addEventListener('click', verPokedex);
 for (const empty of empties) {
     empty.addEventListener('dragover', dragOver);
     empty.addEventListener('dragenter', dragEnter);
     empty.addEventListener('dragleave', dragLeave);
     empty.addEventListener('drop', dragDrop);
-    empty.addEventListener('drop', dragDrop2);
+    // empty.addEventListener('drop', dragDrop2);
 }
 
 // Funciones drag and drop
 function verDatos() {
     quitarDiv()
-    charizard.className += 'visible';
+    squirtle.className += 'visible';
 }
 
 function dragStart() {
@@ -88,17 +92,6 @@ function dragLeave() {
 }
 
 function dragDrop() {
-    this.className = 'empty';
-    imagen.style.width = '50px'
-    imagen.style.height = '50px'
-    this.append(imagen);
-
-}
-
-function dragDrop2() {
-    this.className = 'poke';
-    imagen2.style.width = '30vw'
-    imagen2.style.height = '50vh'
-    this.append(imagen2);
-
+    quitarDiv()
+    combate.className += 'visible';
 }

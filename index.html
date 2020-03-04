@@ -10,6 +10,7 @@
     <!-- ENLACE DE AOS -->
     <title>Poke Proyecto</title>
     <script src="script.js" async defer></script>
+
     <link rel="shortcun icon" type="image/png" href="imagenes/pokebal.png">
 </head>
 
@@ -97,12 +98,14 @@
 
         <!-- POKE-JUEGO -->
         <div id="pokedex" class="invisible">
+            <img class="instrucciones" src="imagenes/instruccionesdeef.png" alt="">
             <div class="pokedex">
+
                 <div class="empty">
                     <div class="fill" draggable="true"> </div>
                 </div>
                 <div class="flexpoke">
-                    <div class="empty"></div>
+                    <div class="empty">Arrastra para combatir</div>
                     <div class="poke"></div>
                 </div>
             </div>
@@ -110,59 +113,59 @@
 
 
         </div>
-        <div id="charizard" class="invisible">
-            <div class="charizard">
-                <img src="imagenes/006.png" />
-
-                <div>
-                    <h3>Charizard</h3>
-                    <p>Charizard se dedica a volar por los cielos en busca de oponentes fuertes. Echa fuego por la boca y es capaz de derretir cualquier cosa. No obstante, si su rival es más débil que él, no usará este ataque.</p>
-                    <p>Tipo : Fuego Volador</p>
-                    <br>
-                    <p>Altura</p>
-                    <p>1,7 m</p>
-                    <br>
-                    <p>Peso </p>
-                    <p>90,5 kg</p>
-                    <br>
-                    <p>Tipo </p>
-                    <p>Fuego Volador</p>
-                </div>
+        <div id="squirtle" class="invisible">
+            <div class="squirtle">
+                <img src="imagenes/squirtlepokedex.jpg" />
+                <button class="volver">Volver a selección</button>
             </div>
-
         </div>
-        <!-- POKE FORMULARIO DE CONTACTO -->
-        <div id="contacto" class="invisible">
+        <!-- poke combate -->
 
-            <div id="form-main">
-                <div id="form-div">
-                    <form class="form" id="form1">
-                        <p class="texto">Para más poke info contactame:</p>
-                        <p class="name">
-                            <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Poke Nombre" id="name" />
-                        </p>
+        <div id="combate" class="invisible">
+            <div class="container-combate">
 
-                        <p class="email">
-                            <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Poke Correo" />
-                        </p>
-
-                        <p class="text">
-                            <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Poke Ayuda"></textarea>
-                        </p>
-
-
-                        <div class="submit">
-                            <input type="submit" value="POKE-ENVIA" id="button-blue" />
-                            <div class="ease"></div>
-                        </div>
-                    </form>
+                <div class="entrenador">
 
                 </div>
+                <div class="enemigo">
+
+                </div>
+
+            </div>
+            <!-- POKE FORMULARIO DE CONTACTO -->
+            <div id="contacto" class="invisible">
+
+                <div id="form-main">
+                    <div id="form-div">
+                        <form class="form" id="form1">
+                            <p class="texto">Para más poke info contactame:</p>
+                            <p class="name">
+                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Poke Nombre" id="name" />
+                            </p>
+
+                            <p class="email">
+                                <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Poke Correo" />
+                            </p>
+
+                            <p class="text">
+                                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Poke Ayuda"></textarea>
+                            </p>
+
+
+                            <div class="submit">
+                                <input type="submit" value="POKE-ENVIA" id="button-blue" />
+                                <div class="ease"></div>
+                            </div>
+                        </form>
+
+                    </div>
 
     </main>
     <footer>
         <img src="imagenes/pokefooter.png" alt="">
     </footer>
+
+    <script src="combate.js"></script>
     <!-- script de AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
