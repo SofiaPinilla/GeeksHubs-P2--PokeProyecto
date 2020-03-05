@@ -17,7 +17,6 @@ function quitarDiv() {
     inicio.className = 'invisible';
     contacto.className = 'invisible';
     pokedex.className = 'invisible';
-    squirtle.className = 'invisible';
     combate.className = 'invisible';
 }
 
