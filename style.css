@@ -1,367 +1,353 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Dosis', sans-serif;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    cursor: url(imagenes/cursorpoke1.png), url(/imagenes/pokecursor.png), pointer;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    overflow: auto;
-    min-height: 70vh;
-}
-
-.inicio {
-    display: flex;
-    margin-bottom: 2rem;
-    background: #f1f1f1;
-}
-
-.pokedex {
-    display: flex;
-    margin-bottom: 2rem;
-    background: #f1f1f1;
-}
-
-.pokedex h3 {
-    margin-bottom: 2rem;
-}
-
-.pokedex img {
-    width: 100%;
-}
-
-.squirtle {
-    display: block;
-    margin-bottom: 2rem;
-    background: #f1f1f1;
-}
-
-.squirtle h3 {
-    margin-bottom: 2rem;
-}
-
-.squirtle img {
-    width: 100%;
-}
-
-.squirtle>div {
-    padding: 2rem;
-}
-
-img {
-    width: 100%;
-}
-
-.inicio h3 {
-    margin-bottom: 2rem;
-}
-
-.inicio img {
-    width: 100%;
-}
-
-.inicio>div {
-    padding: 2rem;
-}
-
-.inicio:nth-child(even) img {
-    order: 2;
-}
-
-#pokedex {
-    text-align: center;
-}
-
-.visible {
-    display: flex;
-}
-
-.invisible {
-    display: none;
-}
-
-.menunavegacion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.menunavegacion ul {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.menunavegacion li {
-    padding: 10px;
-    display: inline;
-}
-
-.javi {
-    all: unset;
-    cursor: url(imagenes/cursorpoke1.png), pointer;
-    font-size: 15px;
-}
-
-.textito {
-    font-family: "Flexo-Demi", arial, sans-serif;
-    display: block;
-    font-size: 87.5%;
-    margin: 0 auto;
-    opacity: 1;
-    position: relative;
-    text-align: center;
-}
-
-.icono {
-    font-size: 175%;
-    line-height: 100%;
-    margin: 15px 0 8px;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    height: 5vh;
-    width: 5vh;
-}
-
-.contaimagen {
-    width: 50%;
-}
-
-
-/* responsive */
-
-@media(max-width: 700px) {
-    .menunavegacion {
-        font-size: 14px;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    .icono {
-        width: 50%;
-        height: 50%;
+    
+    body {
+        font-family: 'Dosis', sans-serif;
+        font-size: 16px;
+        background-color: #f9f9f9;
+        cursor: url(imagenes/cursorpoke1.png), url(/imagenes/pokecursor.png), pointer;
     }
+    
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        overflow: auto;
+    }
+    
     .inicio {
-        display: block;
+        display: flex;
+        margin-bottom: 2rem;
+        background: #f1f1f1;
     }
+    
+    .pokedex {
+        display: flex;
+        margin-bottom: 2rem;
+        background: #f1f1f1;
+    }
+    
+    .pokedex h3 {
+        margin-bottom: 2rem;
+    }
+    
+    .pokedex img {
+        width: 100%;
+    }
+    
     .squirtle {
         display: block;
+        margin-bottom: 2rem;
+        background: #f1f1f1;
     }
-    .container {
-        min-height: 80vh;
+    
+    .squirtle h3 {
+        margin-bottom: 2rem;
     }
-}
-
-
-/* estilos formulario */
-
-#contacto {
-    background: url(imagenes/pokefondodef.jpg);
-    background-size: cover;
-    height: 70vh;
-}
-
-#form-main {
-    display: flex;
-    justify-content: center;
-}
-
-#form-div {
-    padding: 30px;
-    background-color: rgba(72, 72, 72, 0.4);
-    position: absolute;
-    margin-top: 30px;
-}
-
-.feedback-input {
-    color: #3c3c3c;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    border-radius: 0;
-    line-height: 22px;
-    background-color: #fbfbfb;
-    padding: 13px 13px 13px 54px;
-    margin-bottom: 10px;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 3px solid rgba(0, 0, 0, 0);
-}
-
-.feedback-input:focus {
-    background: #fff;
-    box-shadow: 0;
-    border: 3px solid #3498db;
-    color: #3498db;
-    outline: none;
-    padding: 13px 13px 13px 54px;
-}
-
-.focused {
-    color: #30aed6;
-    border: #30aed6 solid 3px;
-}
-
-#name {
-    background-image: url(imagenes/pokenetrenadef.png);
-    background-size: 30px 30px;
-    background-position: 11px 8px;
-    background-repeat: no-repeat;
-}
-
-#name:focus {
-    background-image: url(imagenes/pokenetrenadef.png);
-    background-size: 30px 30px;
-    background-position: 8px 5px;
-    background-position: 11px 8px;
-    background-repeat: no-repeat;
-}
-
-#email {
-    background-image: url(imagenes/pokecorreo.png);
-    background-size: 30px 30px;
-    background-position: 11px 8px;
-    background-repeat: no-repeat;
-}
-
-#email:focus {
-    background-image: url(imagenes/pokecorreo.png);
-    background-size: 30px 30px;
-    background-position: 11px 8px;
-    background-repeat: no-repeat;
-}
-
-#comment {
-    background-image: url(imagenes/pokepen.png);
-    background-size: 30px 30px;
-    background-position: 11px 8px;
-    background-repeat: no-repeat;
-}
-
-textarea {
-    width: 100%;
-    height: 150px;
-    line-height: 150%;
-    resize: vertical;
-}
-
-#button-blue {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    float: left;
-    width: 100%;
-    border: #fbfbfb solid 4px;
-    cursor: url(imagenes/pokecursor.png), pointer;
-    background-color: #3498db;
-    color: white;
-    font-size: 24px;
-    padding-top: 22px;
-    padding-bottom: 22px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    margin-top: -4px;
-    font-weight: 700;
-}
-
-#button-blue:hover {
-    background-color: rgba(0, 0, 0, 0);
-    color: #000000;
-}
-
-.submit:hover {
-    color: #3498db;
-}
-
-.ease {
-    width: 0px;
-    height: 74px;
-    background-image: url(imagenes/pokeenviaa.jpg);
-    -webkit-transition: .3s ease;
-    -moz-transition: .3s ease;
-    -o-transition: .3s ease;
-    -ms-transition: .3s ease;
-    transition: .3s ease;
-}
-
-.submit:hover .ease {
-    width: 100%;
-    background-color: white;
-}
-
-
-/* estilos drag and drop */
-
-.fill {
-    background-image: url('imagenes/pokedraag.png');
-    position: relative;
-    height: 150px;
-    width: 150px;
-    top: 5px;
-    left: 5px;
-    cursor: url(imagenes/pokedexcursor.png), pointer;
-}
-
-.empty {
-    display: inline-block;
-    height: 30vh;
-    width: 30vw;
-    margin: 10px;
-}
-
-.hold {
-    border: solid #ccc 4px;
-    cursor: url(imagenes/pokeentrena.png), pointer;
-}
-
-.hovered {
-    background: #f4f4f4;
-    cursor: url(imagenes/pokeentrena.png), pointer;
-}
-
-.poke {
-    height: 30vh;
-    width: 40vw;
-    margin: 10px;
-}
-
-.poke:hover {
-    cursor: url(imagenes/pokedexcursor.png), pointer;
-}
-
-
-/* poke combate */
-
-.container-combate {
-    margin: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-image: url(imagenes/fondo2.jpg);
-    background-repeat: no-repeat;
-    width: 70vw;
-    height: 70vh;
-}
-
-.enemigo {
-    color: white;
-}
-
-.entrenador {
-    color: white;
-}
-
-.instrucciones {
-    flex: wrap;
-    width: 100%;
-}
+    
+    .squirtle img {
+        width: 100%;
+    }
+    
+    .squirtle>div {
+        padding: 2rem;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    .inicio h3 {
+        margin-bottom: 2rem;
+    }
+    
+    .inicio img {
+        width: 100%;
+    }
+    
+    .inicio>div {
+        padding: 2rem;
+    }
+    
+    .inicio:nth-child(even) img {
+        order: 2;
+    }
+    
+    #pokedex {
+        text-align: center;
+    }
+    
+    .visible {
+        display: flex;
+    }
+    
+    .invisible {
+        display: none;
+    }
+    
+    .menunavegacion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .menunavegacion ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .menunavegacion li {
+        padding: 10px;
+        display: inline;
+    }
+    
+    .javi {
+        all: unset;
+        cursor: url(imagenes/cursorpoke1.png), pointer;
+        font-size: 15px;
+    }
+    
+    .textito {
+        font-family: "Flexo-Demi", arial, sans-serif;
+        display: block;
+        font-size: 87.5%;
+        margin: 0 auto;
+        opacity: 1;
+        position: relative;
+        text-align: center;
+    }
+    
+    .icono {
+        font-size: 175%;
+        line-height: 100%;
+        margin: 15px 0 8px;
+        padding: 0;
+        position: relative;
+        text-align: center;
+        height: 5vh;
+        width: 5vh;
+    }
+    
+    .contaimagen {
+        width: 50%;
+    }
+    /* responsive */
+    
+    @media(max-width: 700px) {
+        .menunavegacion {
+            font-size: 14px;
+        }
+        .icono {
+            width: 50%;
+            height: 50%;
+        }
+        .inicio {
+            display: block;
+        }
+        .squirtle {
+            display: block;
+        }
+    }
+    /* estilos formulario */
+    
+    #contacto {
+        background: url(imagenes/pokefondodef.jpg);
+        background-size: cover;
+        height: 70vh;
+    }
+    
+    #form-main {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #form-div {
+        padding: 30px;
+        background-color: rgba(72, 72, 72, 0.4);
+        position: absolute;
+        margin-top: 30px;
+    }
+    
+    .feedback-input {
+        color: #3c3c3c;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        border-radius: 0;
+        line-height: 22px;
+        background-color: #fbfbfb;
+        padding: 13px 13px 13px 54px;
+        margin-bottom: 10px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 3px solid rgba(0, 0, 0, 0);
+    }
+    
+    .feedback-input:focus {
+        background: #fff;
+        box-shadow: 0;
+        border: 3px solid #3498db;
+        color: #3498db;
+        outline: none;
+        padding: 13px 13px 13px 54px;
+    }
+    
+    .focused {
+        color: #30aed6;
+        border: #30aed6 solid 3px;
+    }
+    
+    #name {
+        background-image: url(imagenes/pokenetrenadef.png);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+    
+    #name:focus {
+        background-image: url(imagenes/pokenetrenadef.png);
+        background-size: 30px 30px;
+        background-position: 8px 5px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+    
+    #email {
+        background-image: url(imagenes/pokecorreo.png);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+    
+    #email:focus {
+        background-image: url(imagenes/pokecorreo.png);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+    
+    #comment {
+        background-image: url(imagenes/pokepen.png);
+        background-size: 30px 30px;
+        background-position: 11px 8px;
+        background-repeat: no-repeat;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 150px;
+        line-height: 150%;
+        resize: vertical;
+    }
+    
+    #button-blue {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        float: left;
+        width: 100%;
+        border: #fbfbfb solid 4px;
+        cursor: url(imagenes/pokecursor.png), pointer;
+        background-color: #3498db;
+        color: white;
+        font-size: 24px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        margin-top: -4px;
+        font-weight: 700;
+    }
+    
+    #button-blue:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: #000000;
+    }
+    
+    .submit:hover {
+        color: #3498db;
+    }
+    
+    .ease {
+        width: 0px;
+        height: 74px;
+        background-image: url(imagenes/pokeenviaa.jpg);
+        -webkit-transition: .3s ease;
+        -moz-transition: .3s ease;
+        -o-transition: .3s ease;
+        -ms-transition: .3s ease;
+        transition: .3s ease;
+    }
+    
+    .submit:hover .ease {
+        width: 100%;
+        background-color: white;
+    }
+    /* estilos drag and drop */
+    
+    .fill {
+        background-image: url('imagenes/pokedraag.png');
+        position: relative;
+        height: 150px;
+        width: 150px;
+        top: 5px;
+        left: 5px;
+        cursor: url(imagenes/pokedexcursor.png), pointer;
+    }
+    
+    .empty {
+        display: inline-block;
+        height: 30vh;
+        width: 30vw;
+        margin: 10px;
+    }
+    
+    .hold {
+        border: solid #ccc 4px;
+        cursor: url(imagenes/pokeentrena.png), pointer;
+    }
+    
+    .hovered {
+        background: #f4f4f4;
+        cursor: url(imagenes/pokeentrena.png), pointer;
+    }
+    
+    .poke {
+        height: 30vh;
+        width: 40vw;
+        margin: 10px;
+    }
+    
+    .poke:hover {
+        cursor: url(imagenes/pokedexcursor.png), pointer;
+    }
+    /* poke combate */
+    
+    .container-combate {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-image: url(imagenes/fondo3.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .enemigo {
+        color: white;
+    }
+    
+    .entrenador {
+        color: white;
+    }
+    
+    .instrucciones {
+        flex: wrap;
+        width: 100%;
+    }

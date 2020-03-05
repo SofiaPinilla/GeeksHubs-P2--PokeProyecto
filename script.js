@@ -44,7 +44,6 @@ const empties = document.querySelectorAll('.empty');
 const imagen = document.createElement('img');
 const imagen2 = document.createElement('img');
 const poke = document.querySelector('.poke');
-const squirtle = document.getElementById('squirtle');
 const volver = document.querySelector('.volver');
 const combate = document.getElementById('combate');
 // imagen.setAttribute('src', 'imagenes/pokeabierta.png');
