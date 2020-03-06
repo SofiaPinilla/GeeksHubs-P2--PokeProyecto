@@ -337,6 +337,7 @@
         background-image: url(imagenes/fondo3.png);
         background-size: cover;
         background-repeat: no-repeat;
+        height: 60vh;
     }
     
     .enemigo {
@@ -344,10 +345,23 @@
     }
     
     .entrenador {
+        padding: 10px;
         color: white;
+    }
+    
+    #vidaEntrenador {
+        background-color: rgb(13, 255, 25);
+        border: 10px;
+        border-radius: 10px;
+        color: red;
     }
     
     .instrucciones {
         flex: wrap;
         width: 100%;
+    }
+    
+    #squirtle3 {
+        height: 200px;
+        width: 200px;
     }

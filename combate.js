@@ -35,7 +35,7 @@ document.querySelector('.enemigo').innerHTML = `   <p></p>
         <p id="vidaEnemigo"></p>
       
         </div>
-        <img src="imagenes/charizard.gif" alt="">
+        <img id="charizard" src="imagenes/charizard.gif" alt="">
     <p id="lanzallamas">Lanzallamas</p>
 `
 
@@ -43,6 +43,8 @@ const placaje = document.getElementById('placaje');
 const vidaEnemigo = document.getElementById('vidaEnemigo');
 const vidaEntrenador = document.getElementById('vidaEntrenador');
 let squirtle3 = document.getElementById('squirtle3');
+let charizard = document.getElementById('charizard');
+let comentarios = document.getElementById('comentarios');
 // let squirtle2 = document.createElement('img');
 // squirtle2.setAttribute('src', 'imagenes/squirtledelado.gif');
 vidaEnemigo.innerText = enemigo.caracteristicas.hp
@@ -56,12 +58,16 @@ placaje.addEventListener('click', entrenadorAtaca);
 function atacar(ataque, pokemonAtaca, pokemonRecibe, isEnemy) {
     pokemonRecibe.caracteristicas.hp = pokemonRecibe.caracteristicas.hp - (ataque.potencia - pokemonRecibe.caracteristicas.defensa)
 
-    alert(pokemonAtaca.nombre + ' ha utilizado ' + ataque.nombre)
+    comentarios.innerHTML = pokemonAtaca.nombre + ' ha utilizado ' + ataque.nombre
     if (!isEnemy) {
         vidaEnemigo.innerHTML = pokemonRecibe.caracteristicas.hp
         enemigoAtaca()
+        setTimeout(cambiarCharizard, 2500);
+        setTimeout(cambiarCharizard2, 4000);
     } else {
         vidaEntrenador.innerHTML = pokemonRecibe.caracteristicas.hp
+        cambiarImagenJS()
+        setTimeout(cambiarImagenJS2, 2000);
     }
 }
 
@@ -86,18 +92,30 @@ function entrenadorAtaca() {
     for (x = 0; x < ataques.length; x++) {
         if (ataques[x].nombre === 'placaje') {
             ataque = ataques[x]
-            squirtle3.src = 'imagenes/squirtledelado.gif';
+
         }
     }
 
-    atacar(ataque, squirtle, entrenador, enemigo, false)
+    atacar(ataque, entrenador, enemigo, false)
 
 }
 
 
-// function cambiarImagenJS() {
-//     squirtle3.src = 'imagenes/squirtledelado.gif';
-// }
+function cambiarImagenJS() {
+    squirtle3.src = 'imagenes/squirtledelado.gif';
+}
+
+function cambiarImagenJS2() {
+    squirtle3.src = 'imagenes/squirtleestatico.gif';
+}
+
+function cambiarCharizard() {
+    charizard.src = 'imagenes/charizard4.gif';
+}
+
+function cambiarCharizard2() {
+    charizard.src = 'imagenes/charizard.gif';
+}
 // function changeImage() {
 //     let squirtle = document.getElementById('squirtle');
 //     if (squirtle.scroll.match("delado")) {
