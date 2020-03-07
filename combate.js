@@ -24,7 +24,7 @@ ataques = [{
     },
     {
         nombre: 'lanzallamas',
-        potencia: 60,
+        potencia: 80,
     },
     {
         nombre: 'burbuja',
@@ -71,9 +71,9 @@ function atacar(ataque, pokemonAtaca, pokemonRecibe, isEnemy) {
             return
         }
         if (pokemonRecibe.caracteristicas.hp <= 100 & pokemonRecibe.caracteristicas.hp > 40) {
-            vidaEnemigoDiv.style.backgroundColor = 'yellow'
+            vidaEnemigoDiv.style.backgroundColor = '#F7D530'
         } else if (pokemonRecibe.caracteristicas.hp <= 40) {
-            vidaEnemigoDiv.style.backgroundColor = 'red'
+            vidaEnemigoDiv.style.backgroundColor = '#F96237'
             vidaEnemigo.style.color = 'white'
         }
         vidaEnemigo.innerHTML = pokemonRecibe.caracteristicas.hp
@@ -90,9 +90,9 @@ function atacar(ataque, pokemonAtaca, pokemonRecibe, isEnemy) {
             return
         }
         if (pokemonRecibe.caracteristicas.hp <= 100 & pokemonRecibe.caracteristicas.hp > 40) {
-            vidaEntrenadorDiv.style.backgroundColor = 'yellow'
+            vidaEntrenadorDiv.style.backgroundColor = '#F7D530'
         } else if (pokemonRecibe.caracteristicas.hp <= 40) {
-            vidaEntrenadorDiv.style.backgroundColor = 'red'
+            vidaEntrenadorDiv.style.backgroundColor = '#F96237'
             vidaEntrenador.style.color = 'white'
         }
         vidaEntrenador.innerHTML = pokemonRecibe.caracteristicas.hp

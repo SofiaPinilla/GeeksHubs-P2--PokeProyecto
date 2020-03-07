@@ -383,6 +383,7 @@ textarea {
 }
 
 .entrenador {
+    min-width: 350px;
     padding: 20px;
     color: white;
 }
@@ -397,7 +398,8 @@ textarea {
 
 #vidaEnemigoDiv {
     background-color: rgb(13, 255, 25);
-    border-radius: 8px;
+    transition: all 3s ease-out;
+    border-radius: 7px;
     width: 300px;
     display: flex;
     align-items: center;
@@ -406,7 +408,8 @@ textarea {
 
 #vidaEntrenadorDiv {
     background-color: rgb(13, 255, 25);
-    border-radius: 8px;
+    transition: all 3s ease-out;
+    border-radius: 7px;
     width: 300px;
     display: flex;
     align-items: center;
@@ -455,7 +458,13 @@ textarea {
 
 .vida {
     color: black;
-    background-color: rgb(223, 223, 223);
+    background-color: #F9F6D8;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 8px;
+}
+
+.bordeVida {
+    border: 2px solid #AEBBB5;
+    border-radius: 10px;
+    background-color: #4B635B;
 }
