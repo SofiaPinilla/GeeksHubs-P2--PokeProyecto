@@ -45,15 +45,19 @@ let charizard = document.getElementById('charizard');
 let audio = document.getElementById("audio");
 const dialogo = document.querySelector('.dialogo');
 
+
 vidaEnemigo.innerText = enemigo.caracteristicas.hp
 vidaEntrenador.innerText = entrenador.caracteristicas.hp
 
+// Listeners de los ataques
 placaje.addEventListener('click', entrenadorAtaca);
 burbuja.addEventListener('click', entrenadorAtaca2);
 
 
+//Función principal del combate
 function atacar(ataque, pokemonAtaca, pokemonRecibe, isEnemy) {
     pokemonRecibe.caracteristicas.hp = pokemonRecibe.caracteristicas.hp - (ataque.potencia - pokemonRecibe.caracteristicas.defensa)
+        //Comentarios del combate
     dialogo.innerText = pokemonAtaca.nombre + ' ha utilizado ' + ataque.nombre
     setTimeout(() => {
         dialogo.innerText = 'Selecciona ataque'
@@ -62,7 +66,8 @@ function atacar(ataque, pokemonAtaca, pokemonRecibe, isEnemy) {
         if (pokemonRecibe.caracteristicas.hp <= 0) {
             pokemonRecibe.caracteristicas.hp = 0
             pokemonRecibe.caracteristicas.hp <= 0
-            console.log('Has ganado, el pokemon ' + pokemonRecibe.nombre + ' ha sido debilitado ..!')
+            dialogo.innerText = 'Has ganado, el pokemon ' + pokemonRecibe.nombre + ' ha sido debilitado ..!'
+            setTimeout("location.href='https://sofiapinilla.github.io/GeeksHubs-P2--PokeProyecto/'", 6000);
             return
         }
         if (pokemonRecibe.caracteristicas.hp <= 100 & pokemonRecibe.caracteristicas.hp > 40) {
@@ -80,7 +85,8 @@ function atacar(ataque, pokemonAtaca, pokemonRecibe, isEnemy) {
     } else { // Ataca el enemigo, el que recibe el ataque es el pokémon del entrenador
         if (pokemonRecibe.caracteristicas.hp <= 0) {
             pokemonRecibe.caracteristicas.hp = 0
-            console.log('Has perdido, tu pokemon ' + pokemonRecibe.nombre + ' ha sido debilitado ..!')
+            dialogo.innerText = 'Has perdido, tu pokemon ' + pokemonRecibe.nombre + ' ha sido debilitado ..!'
+            setTimeout("location.href='https://sofiapinilla.github.io/GeeksHubs-P2--PokeProyecto/'", 6000);
             return
         }
         if (pokemonRecibe.caracteristicas.hp <= 100 & pokemonRecibe.caracteristicas.hp > 40) {
@@ -94,6 +100,7 @@ function atacar(ataque, pokemonAtaca, pokemonRecibe, isEnemy) {
     }
 }
 
+//Funcion del ataque de charizard
 function enemigoAtaca() {
     console.log('enemigoAtaca')
     let ataque = {}
@@ -107,7 +114,7 @@ function enemigoAtaca() {
 }
 
 
-
+//Función del ataque placaje
 function entrenadorAtaca() {
     console.log('entrenadorAtaca')
 
@@ -122,7 +129,7 @@ function entrenadorAtaca() {
     setTimeout(cambiarImagenJS2, 2000);
     atacar(ataque, entrenador, enemigo, false)
 }
-
+//Función del ataque burbuja
 function entrenadorAtaca2() {
     console.log('entrenadorAtaca')
 
@@ -140,16 +147,7 @@ function entrenadorAtaca2() {
     atacar(ataque, entrenador, enemigo, false)
 }
 
-function vida() {
-
-    for (x = 0; x < pokemons.length; x++) {
-        if (pokemons[x].caracteristicas.hp <= 0) {
-            console.log('enhorabuena');
-        }
-    }
-
-}
-
+//Funciones de las animaciones, cambios de gif
 function cambiarImagenJS() {
     squirtle3.src = 'imagenes/squirtle2.gif';
 }
@@ -177,3 +175,5 @@ function cambiarCharizard2() {
     charizard.style.height = '170px';
     charizard.style.width = '170px';
 }
+
+//La funcion de redireccionar al final del combate

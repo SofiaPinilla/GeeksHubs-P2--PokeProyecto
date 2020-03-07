@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- ENLACE DE AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Poke Proyecto</title>
+    <!-- Script del menu navegación,del drag and drop, etc -->
     <script src="script.js" async defer></script>
-
+    <!-- Script del poke combate -->
+    <script src="combate.js" async defer></script>
+    <!-- Favicon -->
     <link rel="shortcun icon" type="image/png" href="imagenes/pokebal.png">
 </head>
 
@@ -38,7 +41,7 @@
                    <span><img class="icono" src="imagenes/pokebal2.png" alt=""></span>
                 </span><span class="textito">CONTACTO</span>
             </li>
-
+        </ul>
     </div>
     <main class="container">
         <!-- LA POKE PAGINA DE INICIO -->
@@ -98,10 +101,11 @@
 
         <!-- POKE-JUEGO -->
         <div id="pokedex" class="invisible">
-            <img class="instrucciones" src="imagenes/instruccionesdef.png" alt="">
+            <img class="instrucciones" src="imagenes/instruccionesdefff.png" alt="">
             <div class="pokedex">
 
                 <div class="empty">
+                    <!-- Drag and Drop -->
                     <div class="fill" draggable="true"> </div>
                 </div>
                 <div class="flexpoke">
@@ -111,13 +115,13 @@
             </div>
         </div>
         <div id="squirtle" class="invisible">
+            <!-- Pokédex de squirtle -->
             <div class="squirtle">
                 <img src="imagenes/squirtlepokedex.png" />
                 <audio id="audio2" src="sonido/squirtle.mp3"></audio>
             </div>
         </div>
-        <!-- poke combate -->
-
+        <!-- Poke combate -->
         <div id="combate" class="invisible">
             <div class="container-combate">
                 <div class="entrenador">
@@ -151,8 +155,8 @@
             <audio id="audio" src="sonido/pokecombate.mp3"></audio>
         </div>
 
+        <!-- POKE FORMULARIO DE CONTACTO -->
         <div id="contacto" class="invisible">
-            <!-- POKE FORMULARIO DE CONTACTO -->
             <div id="form-main">
                 <div id="form-div">
                     <form class="form" id="form1">
@@ -181,10 +185,10 @@
         </div>
     </main>
     <footer>
+        <!-- POKE Footer -->
         <img src="imagenes/pokefooter.png" alt="">
     </footer>
 
-    <script src="combate.js"></script>
     <!-- script de AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

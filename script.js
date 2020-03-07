@@ -48,8 +48,6 @@ const poke = document.querySelector('.poke');
 const squirtle = document.getElementById('squirtle');
 const volver = document.querySelector('.volver');
 const combate = document.getElementById('combate');
-// imagen.setAttribute('src', 'imagenes/pokeabierta.png');
-// imagen2.setAttribute('src', 'imagenes/charizard.png');
 
 // Listeners del drag and drop
 fill.addEventListener('dragstart', dragStart);
@@ -60,7 +58,6 @@ for (const empty of empties) {
     empty.addEventListener('dragenter', dragEnter);
     empty.addEventListener('dragleave', dragLeave);
     empty.addEventListener('drop', dragDrop);
-    // empty.addEventListener('drop', dragDrop2);
 }
 
 // Funciones drag and drop
@@ -95,5 +92,5 @@ function dragLeave() {
 function dragDrop() {
     quitarDiv()
     combate.className += 'visible';
-    // audio.play();
+    audio.play();
 }

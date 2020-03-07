@@ -166,15 +166,24 @@ img {
         display: block;
     }
     #combate {
-        display: block;
+        background-image: url(imagenes/fondo4.png);
+        background-size: 100%;
     }
-    #squirtle3 {
-        width: 30px;
+}
+
+@media(max-width: 0px) {
+    #combate {
+        background-image: url(imagenes/fondo4.png)
     }
-    #charizard {
-        height: 70px;
-        width: 70px;
-    }
+}
+
+#squirtle3 {
+    width: 30px;
+}
+
+#charizard {
+    height: 70px;
+    width: 70px;
 }
 
 
@@ -355,15 +364,15 @@ textarea {
 
 #combate {
     display: flex;
-    background-image: url(imagenes/fondo3.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
 }
 
 .container-combate {
     position: relative;
     display: flex;
     justify-content: space-around;
+    background-image: url(imagenes/fondo3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
     width: 100%;
 }
 
