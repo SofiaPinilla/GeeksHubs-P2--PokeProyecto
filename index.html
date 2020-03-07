@@ -98,7 +98,7 @@
 
         <!-- POKE-JUEGO -->
         <div id="pokedex" class="invisible">
-            <img class="instrucciones" src="imagenes/instruccionesdeef.png" alt="">
+            <img class="instrucciones" src="imagenes/instruccionesdef.png" alt="">
             <div class="pokedex">
 
                 <div class="empty">
@@ -109,41 +109,48 @@
                     <div class="poke"></div>
                 </div>
             </div>
-
-
-
         </div>
         <div id="squirtle" class="invisible">
             <div class="squirtle">
-                <img src="imagenes/squirtlepokedex.jpg" />
-                <button class="volver">Volver a selección</button>
+                <img src="imagenes/squirtlepokedex.png" />
+                <audio id="audio2" src="sonido/squirtle.mp3"></audio>
             </div>
         </div>
         <!-- poke combate -->
 
         <div id="combate" class="invisible">
             <div class="container-combate">
-                <p id="comentarios"></p>
                 <div class="entrenador">
-                    <p></p>
-                    <div class="vida">VidaEntrenador(Squirtle)
-                        <p id="vidaEntrenador"></p>
-
+                    <div class="vida">Vida entrenador(Squirtle)
+                        <div id="vidaEntrenadorDiv">
+                            <p id="vidaEntrenador"></p>
+                        </div>
                     </div>
-                    <img id="squirtle3" src="imagenes/squirtleestatico.gif" alt="">
-
-
-                    <button id="placaje">Placaje</button>
+                    <div style="height: 110px;"></div>
+                    <div style="display: flex; align-items: center; justify-content: flex-end;">
+                        <img id="squirtle3" src="imagenes/squirtle.gif" alt="">
+                    </div>
+                    <div class="ataquesquirtle">
+                        <p id="placaje">Placaje</p>
+                        <p id="burbuja">Burbuja</p>
+                    </div>
                 </div>
+                <div class="dialogo"></div>
                 <div class="enemigo">
-
+                    <p></p>
+                    <div class="vida">Vida enemigo(Charizard)
+                        <div id="vidaEnemigoDiv">
+                            <p id="vidaEnemigo"></p>
+                        </div>
+                    </div>
+                    <img id="charizard" src="imagenes/charizard3.gif" alt="">
+                    <p id="lanzallamas"></p>
                 </div>
+                <img id="sinfondo" src="imagenes/burbuja.gif" alt="">
             </div>
-
-
+            <audio id="audio" src="sonido/pokecombate.mp3"></audio>
         </div>
 
-        </div>
         <div id="contacto" class="invisible">
             <!-- POKE FORMULARIO DE CONTACTO -->
             <div id="form-main">

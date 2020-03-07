@@ -55,7 +55,6 @@ const combate = document.getElementById('combate');
 fill.addEventListener('dragstart', dragStart);
 fill.addEventListener('dragend', dragEnd);
 fill.addEventListener('click', verDatos);
-volver.addEventListener('click', verPokedex);
 for (const empty of empties) {
     empty.addEventListener('dragover', dragOver);
     empty.addEventListener('dragenter', dragEnter);
@@ -68,6 +67,8 @@ for (const empty of empties) {
 function verDatos() {
     quitarDiv()
     squirtle.className += 'visible';
+    audio2.play();
+    setTimeout(verPokedex, 14000);
 }
 
 function dragStart() {
@@ -94,4 +95,5 @@ function dragLeave() {
 function dragDrop() {
     quitarDiv()
     combate.className += 'visible';
+    // audio.play();
 }

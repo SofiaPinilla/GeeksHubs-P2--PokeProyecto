@@ -20,54 +20,77 @@ let entrenador = pokemons[1];
 
 ataques = [{
         nombre: 'placaje',
-        potencia: 50,
+        potencia: 30,
     },
     {
         nombre: 'lanzallamas',
         potencia: 60,
+    },
+    {
+        nombre: 'burbuja',
+        potencia: 100,
     }
 
 ]
 
-// document.querySelector('.entrenador').innerHTML = `    `
-document.querySelector('.enemigo').innerHTML = `   <p></p>
-    <div class="vida">Vida enemigo(Charizard)
-        <p id="vidaEnemigo"></p>
-      
-        </div>
-        <img id="charizard" src="imagenes/charizard.gif" alt="">
-    <p id="lanzallamas">Lanzallamas</p>
-`
-
 const placaje = document.getElementById('placaje');
+const burbuja = document.getElementById('burbuja');
 const vidaEnemigo = document.getElementById('vidaEnemigo');
+const vidaEnemigoDiv = document.getElementById('vidaEnemigoDiv');
 const vidaEntrenador = document.getElementById('vidaEntrenador');
+const vidaEntrenadorDiv = document.getElementById('vidaEntrenadorDiv');
 let squirtle3 = document.getElementById('squirtle3');
+let sinfondo = document.getElementById('sinfondo');
 let charizard = document.getElementById('charizard');
-let comentarios = document.getElementById('comentarios');
-// let squirtle2 = document.createElement('img');
-// squirtle2.setAttribute('src', 'imagenes/squirtledelado.gif');
+let audio = document.getElementById("audio");
+const dialogo = document.querySelector('.dialogo');
+
 vidaEnemigo.innerText = enemigo.caracteristicas.hp
 vidaEntrenador.innerText = entrenador.caracteristicas.hp
+
 placaje.addEventListener('click', entrenadorAtaca);
-// placaje.addEventListener('click', cambiarImagenJS);
-
-
+burbuja.addEventListener('click', entrenadorAtaca2);
 
 
 function atacar(ataque, pokemonAtaca, pokemonRecibe, isEnemy) {
     pokemonRecibe.caracteristicas.hp = pokemonRecibe.caracteristicas.hp - (ataque.potencia - pokemonRecibe.caracteristicas.defensa)
-
-    comentarios.innerHTML = pokemonAtaca.nombre + ' ha utilizado ' + ataque.nombre
-    if (!isEnemy) {
+    dialogo.innerText = pokemonAtaca.nombre + ' ha utilizado ' + ataque.nombre
+    setTimeout(() => {
+        dialogo.innerText = 'Selecciona ataque'
+    }, 6000);
+    if (!isEnemy) { // Ataca el entrenador, el que recibe el ataque es el pokémon enemigo
+        if (pokemonRecibe.caracteristicas.hp <= 0) {
+            pokemonRecibe.caracteristicas.hp = 0
+            pokemonRecibe.caracteristicas.hp <= 0
+            console.log('Has ganado, el pokemon ' + pokemonRecibe.nombre + ' ha sido debilitado ..!')
+            return
+        }
+        if (pokemonRecibe.caracteristicas.hp <= 100 & pokemonRecibe.caracteristicas.hp > 40) {
+            vidaEnemigoDiv.style.backgroundColor = 'yellow'
+        } else if (pokemonRecibe.caracteristicas.hp <= 40) {
+            vidaEnemigoDiv.style.backgroundColor = 'red'
+            vidaEnemigo.style.color = 'white'
+        }
         vidaEnemigo.innerHTML = pokemonRecibe.caracteristicas.hp
-        enemigoAtaca()
-        setTimeout(cambiarCharizard, 2500);
-        setTimeout(cambiarCharizard2, 4000);
-    } else {
+        vidaEnemigoDiv.style.width = pokemonRecibe.caracteristicas.hp * 3 / 2 + 'px' //calculo de tamaño barra
+
+        setTimeout(enemigoAtaca, 2000);
+        setTimeout(cambiarCharizard, 4000);
+        setTimeout(cambiarCharizard2, 6000);
+    } else { // Ataca el enemigo, el que recibe el ataque es el pokémon del entrenador
+        if (pokemonRecibe.caracteristicas.hp <= 0) {
+            pokemonRecibe.caracteristicas.hp = 0
+            console.log('Has perdido, tu pokemon ' + pokemonRecibe.nombre + ' ha sido debilitado ..!')
+            return
+        }
+        if (pokemonRecibe.caracteristicas.hp <= 100 & pokemonRecibe.caracteristicas.hp > 40) {
+            vidaEntrenadorDiv.style.backgroundColor = 'yellow'
+        } else if (pokemonRecibe.caracteristicas.hp <= 40) {
+            vidaEntrenadorDiv.style.backgroundColor = 'red'
+            vidaEntrenador.style.color = 'white'
+        }
         vidaEntrenador.innerHTML = pokemonRecibe.caracteristicas.hp
-        cambiarImagenJS()
-        setTimeout(cambiarImagenJS2, 2000);
+        vidaEntrenadorDiv.style.width = pokemonRecibe.caracteristicas.hp * 3 / 2 + 'px' //calculo de tamaño barra
     }
 }
 
@@ -95,46 +118,62 @@ function entrenadorAtaca() {
 
         }
     }
-
+    cambiarImagenJS()
+    setTimeout(cambiarImagenJS2, 2000);
     atacar(ataque, entrenador, enemigo, false)
+}
+
+function entrenadorAtaca2() {
+    console.log('entrenadorAtaca')
+
+    for (x = 0; x < ataques.length; x++) {
+        if (ataques[x].nombre === 'burbuja') {
+            ataque = ataques[x]
+
+        }
+
+    }
+    cambiarImagenJS()
+    setTimeout(cambiarImagenJS2, 2000);
+    cambiarBurbuja()
+    setTimeout(cambiarBurbuja2, 2000);
+    atacar(ataque, entrenador, enemigo, false)
+}
+
+function vida() {
+
+    for (x = 0; x < pokemons.length; x++) {
+        if (pokemons[x].caracteristicas.hp <= 0) {
+            console.log('enhorabuena');
+        }
+    }
 
 }
 
-
 function cambiarImagenJS() {
-    squirtle3.src = 'imagenes/squirtledelado.gif';
+    squirtle3.src = 'imagenes/squirtle2.gif';
+}
+
+function cambiarBurbuja() {
+    sinfondo.style.display = 'block';
 }
 
 function cambiarImagenJS2() {
-    squirtle3.src = 'imagenes/squirtleestatico.gif';
+    squirtle3.src = 'imagenes/squirtle.gif';
+}
+
+function cambiarBurbuja2() {
+    sinfondo.style.display = 'none';
 }
 
 function cambiarCharizard() {
     charizard.src = 'imagenes/charizard4.gif';
+    charizard.style.height = '170px';
+    charizard.style.width = '170px';
 }
 
 function cambiarCharizard2() {
-    charizard.src = 'imagenes/charizard.gif';
+    charizard.src = 'imagenes/charizard3.gif';
+    charizard.style.height = '170px';
+    charizard.style.width = '170px';
 }
-// function changeImage() {
-//     let squirtle = document.getElementById('squirtle');
-//     if (squirtle.scroll.match("delado")) {
-//         squirtle.src = "imagenes/squirtleestatico.gif";
-//     } else {
-//         squirtle.src = "imagenes/squirtledelado.gif";
-//     }
-// }
-
-// <h1>JavaScript puede cambiar imágenes</h1>
-// <img id="myImage" onclick="changeImage()" src="bombillaoff.gif" width="100" height="180">
-// <p>Click en la bombilla para encenderla/apagarla.</p>
-// <script>
-// function changeImage() {
-//     var image = document.getElementById('myImage');
-//     if (image.src.match("on")) {
-//         image.src = "bombillaoff.gif";
-//     } else {
-//         image.src = "bombillaon.gif";
-//     }
-// }
-// </script>
