@@ -2,7 +2,7 @@ const pokemons = [{
         nombre: 'charizard',
         caracteristicas: {
             hp: 200,
-            defensa: 10,
+            defensa: 20,
         }
     },
     {
@@ -175,5 +175,3 @@ function cambiarCharizard2() {
     charizard.style.height = '170px';
     charizard.style.width = '170px';
 }
-
-//La funcion de redireccionar al final del combate

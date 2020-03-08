@@ -94,3 +94,31 @@ function dragDrop() {
     combate.className += 'visible';
     audio.play();
 }
+
+//Local Storage del formulario
+
+const btn = document.getElementById('button-blue');
+const name = document.getElementById('name')
+const email = document.getElementById('email')
+const comment = document.getElementById("comment")
+btn.addEventListener('click', guardarFormulario);
+
+function guardarFormulario(event) {
+
+    const datosFormulario = {
+        name: name.value,
+        email: email.value,
+        comment: comment.value,
+    }
+    localStorage.setItem('datosFormulario', JSON.stringify(datosFormulario))
+    const msnExitoso = document.getElementById('msnExitoso');
+
+    setTimeout(() => {
+        verInicio();
+        msnExitoso.remove();
+    }, 3000);
+    event.preventDefault();
+    document.getElementById('form1').reset();
+    msnExitoso.innerText = datosFormulario.name + ' tu mensaje ha sido enviado correctamente';
+    msnExitoso.className += 'visible';
+}

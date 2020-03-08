@@ -25,19 +25,19 @@
     <!-- POKE MENU DE NAVEGACIÓN -->
     <div class="menunavegacion">
         <ul>
-            <li>
-                <span class="javi" href="#" id="inicioJavi">
+            <li id="inicioJavi">
+                <span class="javi" href="#">
                     <span><img class="icono" src="imagenes/pokebal.png" alt=""></span>
                 </span>
                 <span class="textito">INICIO</span>
             </li>
-            <li>
-                <span class="javi" href="#" id="pokedexJavi">
+            <li id="pokedexJavi">
+                <span class="javi" href="#">
                    <span><img class="icono" src="imagenes/pokedex1.png" alt=""></span>
                 </span><span class="textito">POKE-JUEGO</span>
             </li>
-            <li>
-                <span class="javi" href="#" id="contactoJavi">
+            <li id="contactoJavi">
+                <span class="javi" href="#">
                    <span><img class="icono" src="imagenes/pokebal2.png" alt=""></span>
                 </span><span class="textito">CONTACTO</span>
             </li>
@@ -109,7 +109,7 @@
                     <div class="fill" draggable="true"> </div>
                 </div>
                 <div class="flexpoke">
-                    <div class="empty">Arrastra para combatir</div>
+                    <div class="empty"></div>
                     <div class="poke"></div>
                 </div>
             </div>
@@ -132,8 +132,8 @@
                             </div>
                         </div>
                     </div>
-                    <div style="height: 110px;"></div>
-                    <div style="display: flex; align-items: center; justify-content: flex-end;">
+                    <div class="altura"></div>
+                    <div class="flexSquirtle">
                         <img id="squirtle3" src="imagenes/squirtle.gif" alt="">
                     </div>
                     <div class="ataquesquirtle">
@@ -170,18 +170,18 @@
                         </p>
 
                         <p class="email">
-                            <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Poke Correo" />
+                            <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Poke Correo" />
                         </p>
 
                         <p class="text">
                             <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Poke Ayuda"></textarea>
                         </p>
 
-
                         <div class="submit">
                             <input type="submit" value="POKE-ENVIA" id="button-blue" />
                             <div class="ease"></div>
                         </div>
+                        <p id="msnExitoso" class="invisible"></p>
                     </form>
 
                 </div>
