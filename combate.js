@@ -1,3 +1,16 @@
+const placaje = document.getElementById('placaje');
+const burbuja = document.getElementById('burbuja');
+const vidaEnemigo = document.getElementById('vidaEnemigo');
+const vidaEnemigoDiv = document.getElementById('vidaEnemigoDiv');
+const vidaEntrenador = document.getElementById('vidaEntrenador');
+const vidaEntrenadorDiv = document.getElementById('vidaEntrenadorDiv');
+let squirtle3 = document.getElementById('squirtle3');
+let sinfondo = document.getElementById('sinfondo');
+let charizard = document.getElementById('charizard');
+let audio = document.getElementById("audio");
+const dialogo = document.querySelector('.dialogo');
+
+//Los pokemons y sus caracteristicas
 const pokemons = [{
         nombre: 'charizard',
         caracteristicas: {
@@ -16,8 +29,7 @@ const pokemons = [{
 
 let enemigo = pokemons[0];
 let entrenador = pokemons[1];
-
-
+//Array con los diferentes ataques
 ataques = [{
         nombre: 'placaje',
         potencia: 30,
@@ -33,17 +45,6 @@ ataques = [{
 
 ]
 
-const placaje = document.getElementById('placaje');
-const burbuja = document.getElementById('burbuja');
-const vidaEnemigo = document.getElementById('vidaEnemigo');
-const vidaEnemigoDiv = document.getElementById('vidaEnemigoDiv');
-const vidaEntrenador = document.getElementById('vidaEntrenador');
-const vidaEntrenadorDiv = document.getElementById('vidaEntrenadorDiv');
-let squirtle3 = document.getElementById('squirtle3');
-let sinfondo = document.getElementById('sinfondo');
-let charizard = document.getElementById('charizard');
-let audio = document.getElementById("audio");
-const dialogo = document.querySelector('.dialogo');
 
 
 vidaEnemigo.innerText = enemigo.caracteristicas.hp
@@ -55,24 +56,24 @@ burbuja.addEventListener('click', entrenadorAtaca2);
 
 
 //Función principal del combate
-function atacar(ataque, pokemonAtaca, pokemonRecibe, isEnemy) {
+function atacar(ataque, pokemonAtaca, pokemonRecibe, esEnemigo) {
     pokemonRecibe.caracteristicas.hp = pokemonRecibe.caracteristicas.hp - (ataque.potencia - pokemonRecibe.caracteristicas.defensa)
         //Comentarios del combate
     dialogo.innerText = pokemonAtaca.nombre + ' ha utilizado ' + ataque.nombre
     setTimeout(() => {
         dialogo.innerText = 'Selecciona ataque'
     }, 6000);
-    if (!isEnemy) { // Ataca el entrenador, el que recibe el ataque es el pokémon enemigo
+    if (!esEnemigo) { // Ataca el entrenador, el que recibe el ataque es el pokémon enemigo
         if (pokemonRecibe.caracteristicas.hp <= 0) {
             pokemonRecibe.caracteristicas.hp = 0
             pokemonRecibe.caracteristicas.hp <= 0
             dialogo.innerText = 'Has ganado, el pokemon ' + pokemonRecibe.nombre + ' ha sido debilitado ..!'
-            setTimeout("location.href='https://sofiapinilla.github.io/GeeksHubs-P2--PokeProyecto/'", 6000);
+            setTimeout("location.href='https://sofiapinilla.github.io/GeeksHubs-P2--PokeProyecto/'", 3000);
             return
         }
-        if (pokemonRecibe.caracteristicas.hp <= 100 & pokemonRecibe.caracteristicas.hp > 40) {
+        if (pokemonRecibe.caracteristicas.hp <= 100 & pokemonRecibe.caracteristicas.hp > 40) { //color de la vida entre 100 y 40
             vidaEnemigoDiv.style.backgroundColor = '#F7D530'
-        } else if (pokemonRecibe.caracteristicas.hp <= 40) {
+        } else if (pokemonRecibe.caracteristicas.hp <= 40) { //color de la vida de 40 a menos
             vidaEnemigoDiv.style.backgroundColor = '#F96237'
             vidaEnemigo.style.color = 'white'
         }
@@ -86,12 +87,12 @@ function atacar(ataque, pokemonAtaca, pokemonRecibe, isEnemy) {
         if (pokemonRecibe.caracteristicas.hp <= 0) {
             pokemonRecibe.caracteristicas.hp = 0
             dialogo.innerText = 'Has perdido, tu pokemon ' + pokemonRecibe.nombre + ' ha sido debilitado ..!'
-            setTimeout("location.href='https://sofiapinilla.github.io/GeeksHubs-P2--PokeProyecto/'", 6000);
+            setTimeout("location.href='https://sofiapinilla.github.io/GeeksHubs-P2--PokeProyecto/'", 3000);
             return
         }
-        if (pokemonRecibe.caracteristicas.hp <= 100 & pokemonRecibe.caracteristicas.hp > 40) {
+        if (pokemonRecibe.caracteristicas.hp <= 100 & pokemonRecibe.caracteristicas.hp > 40) { //color de la vida entre 100 y 40
             vidaEntrenadorDiv.style.backgroundColor = '#F7D530'
-        } else if (pokemonRecibe.caracteristicas.hp <= 40) {
+        } else if (pokemonRecibe.caracteristicas.hp <= 40) { //color de la vida de 40 a menos
             vidaEntrenadorDiv.style.backgroundColor = '#F96237'
             vidaEntrenador.style.color = 'white'
         }
@@ -103,13 +104,11 @@ function atacar(ataque, pokemonAtaca, pokemonRecibe, isEnemy) {
 //Funcion del ataque de charizard
 function enemigoAtaca() {
     console.log('enemigoAtaca')
-    let ataque = {}
     for (x = 0; x < ataques.length; x++) {
         if (ataques[x].nombre === 'lanzallamas') {
             ataque = ataques[x]
         }
     }
-
     atacar(ataque, enemigo, entrenador, true)
 }
 
@@ -117,12 +116,9 @@ function enemigoAtaca() {
 //Función del ataque placaje
 function entrenadorAtaca() {
     console.log('entrenadorAtaca')
-
-    let ataque = {}
     for (x = 0; x < ataques.length; x++) {
         if (ataques[x].nombre === 'placaje') {
             ataque = ataques[x]
-
         }
     }
     cambiarImagenJS()
@@ -132,13 +128,10 @@ function entrenadorAtaca() {
 //Función del ataque burbuja
 function entrenadorAtaca2() {
     console.log('entrenadorAtaca')
-
     for (x = 0; x < ataques.length; x++) {
         if (ataques[x].nombre === 'burbuja') {
             ataque = ataques[x]
-
         }
-
     }
     cambiarImagenJS()
     setTimeout(cambiarImagenJS2, 2000);
