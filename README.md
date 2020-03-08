@@ -13,7 +13,7 @@ Puedes ver el proyecto en https://sofiapinilla.github.io/GeeksHubs-P2--PokeProye
  
  ---
  
-# GeeksHubs-P2 - PokeProyecto
+# GeeksHubs-P2 - PokeProject
 This project consists of a Pokemon website, in which I make a brief introduction of Pokemon, which is pokemon,
 Pokemon video games, and Pokemon anime.
 
