@@ -4,7 +4,7 @@ los videojuegos de pokemon, y pokemon el anime.
 
 ## Tecnologías que he utilizado 🛠️
 
->Mi pagina de Pokemon esta creada con HTML5 + API HTML5, CSS3,Layout ( Flex ), Responsive Design y
+>Mi pagina de Pokemon esta creada con HTML5 + API HTML5(LocalStorage y Drag and Drop), CSS3,Layout ( Flex ), Responsive Design y
 JavaScript.
 
 ### Demo del proyecto 
@@ -13,7 +13,7 @@ Puedes ver el proyecto en https://sofiapinilla.github.io/GeeksHubs-P2--PokeProye
  
  ---
  
-# GeeksHubs-P2 - PokeProyecto
+# GeeksHubs-P2 - PokeProject
 This project consists of a Pokemon website, in which I make a brief introduction of Pokemon, which is pokemon,
 Pokemon video games, and Pokemon anime.
 
