@@ -25,5 +25,11 @@ You can see the project at https://sofiapinilla.github.io/GeeksHubs-P2--PokeProy
 
 ![Pokefoto](imagenes/pokefoto.png) 
 
+También puedes disfrutar de un combate pokémon:
+
+![Pokefoto](imagenes/combate.png) 
+
+![Pokefoto](imagenes/combate2.png) 
+
 ---
 Hecho por [Sofía Pinilla](https://github.com/SofiaPinilla) 😊
